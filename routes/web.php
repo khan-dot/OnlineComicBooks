@@ -25,3 +25,7 @@ Route::get('/chapter/{name}/{no}','PagesController@chapter');
 
 
 Route::resource('/','PagesController'); 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
