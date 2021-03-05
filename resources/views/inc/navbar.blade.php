@@ -18,7 +18,8 @@
 <header id="header">
     <div class="container d-flex">
 
-        <div class="logo mr-auto">
+        <div style="display: flex" class="logo mr-auto">
+            <span style="margin-right: 10px;"><img src="/images/thumbnails/logo_icon.jpg"/></span>
             <h1 class="text-light"><a href="/">Comics Online</a></h1>
         </div>
 
