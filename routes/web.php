@@ -23,6 +23,7 @@ Route::get('/register','PagesController@register');
 Route::get('/titles/{name}','PagesController@titles');
 Route::get('/chapter/{name}/{no}','PagesController@chapter');
 
+Route::post('/comment/add','CommentsController@addComment');
 
 Route::resource('/','PagesController'); 
 
