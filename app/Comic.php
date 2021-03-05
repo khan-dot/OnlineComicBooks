@@ -11,4 +11,5 @@ class Comic extends Model
     public $primaryKey='id';
     public $timestamps= true;
     
+    
 }

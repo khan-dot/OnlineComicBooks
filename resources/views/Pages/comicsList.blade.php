@@ -6,12 +6,13 @@
 
 @if(count($comics)>0)
 	@foreach($comics as $comic)
+    <div class="container">
     <a href="/titles/{{{$comic->comic}}}">
-	<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+	<div class="comDiv">
 		
         <div class="member" data-aos="fade-up" data-aos-delay="300">
             <div class="member-img">
-                <img src="\images\thumbnails\{{$comic->comic}}.jpg" class="img-fluid" alt="">
+                <img src="\images\thumbnails\{{$comic->comic}}.jpg" width="333" height="400" class="img-fluid" alt="">
             </div>
             <div class="member-info">
                 <h3 style="color: white">{{$comic->comic}}</h3>
@@ -23,8 +24,12 @@
         </div>
   </div>
 </a>
+</div>
+<hr>
 	@endforeach
 @endif
+
+
 
 
 @endsection

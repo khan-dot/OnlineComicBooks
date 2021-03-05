@@ -56,10 +56,10 @@
 <div style="display: none">
     <div id="loginForm">
         <div class="loginFormContainer">
-        <input type="email" id="email">
-        <br/>
-        <input type="password" id="password">
-        <br/>
+        <input type="email" placeholder="Email ID.." id="email">
+        <br>
+        <input type="password" placeholder="Password.." id="password">
+        <br><br>
         <button>Login</button>
         </div>
     </div>

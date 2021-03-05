@@ -26,12 +26,18 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
-.loginFormContainer {
-  text-align: center;
-  padding: 20px;
-  border: 2px solid rgb(143, 192, 78);
+hr {
+   border: 1px 
+   solid white;
+  border-radius: 1px;
 }
 
+.loginFormContainer {
+  text-align: center;
+  padding: 30px;
+  border: 2px solid rgb(143, 192, 78);
+  background-color: black; 
+}
 
 
 
