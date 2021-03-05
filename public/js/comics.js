@@ -3,6 +3,7 @@
 $(document).ready(function(){
 
 
-  $('.loginForm').colorbox({inline: true, width:"50%"});
-
+	$('#loginIcon').click(function() {
+		$.colorbox({html: $('#loginForm').html(), width:"333px", close: '<i class="icofont-close-circled"></i>'});
+	});
 });
