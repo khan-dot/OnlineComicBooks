@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/titles/{name}','CommentsController@store');
+Auth::routes();
+
 
 Route::get('/comics','ComicsController@index'); 
+
+Route::get('/','ComicsController@index'); 
 
 Route::get('/about','PagesController@about');  
 
@@ -31,10 +34,17 @@ Route::get('/titles/{name}','PagesController@titles');
 
 Route::get('/chapter/{name}/{no}','PagesController@chapter');
 
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+/**
+ * Post request!
+ */
+
+Route::post('/titles/{name}','CommentsController@store');
+
 Route::post('/comment/add','CommentsController@addComment');
 
-Route::resource('/','PagesController'); 
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
