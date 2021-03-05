@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/titles/{name}','CommentsController@store');
-Route::get('/comics','ComicsController@index'); 
+
+Route::get('/','ComicsController@index'); 
 Route::get('/about','PagesController@about');  
 Route::get('/favorites','ComicsController@favorites'); 
 Route::get('/comicsList','ComicsController@comicsList');
@@ -23,9 +23,8 @@ Route::get('/register','PagesController@register');
 Route::get('/titles/{name}','PagesController@titles');
 Route::get('/chapter/{name}/{no}','PagesController@chapter');
 
+Route::post('/titles/{name}','CommentsController@store');
 Route::post('/comment/add','CommentsController@addComment');
-
-Route::resource('/','PagesController'); 
 
 Auth::routes();
 

@@ -26,31 +26,41 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="/comics">Home</a></li>
+          <li class="active"><a href="/">Home</a></li>
           <li><a href="/comicsList">Comics List</a></li>
           <li><a href="/favorites">Favorites</a></li>
           <li><a href="/about">About Us</a></li>
-          <li><a href="/register">Login/Register</a></li>
           <li class="drop-down"><a href="">Latest Release</a>
             <ul>
-              <li><a href="#">Naruto</a></li>
-              <li class="drop-down"><a href="#">Attack on Titans</a>
+              <li><a href="/titles/Naruto">Naruto</a></li>
+              <li class="drop-down"><a href="/titles/Attack%20On%20Titan">Attack on Titans</a>
                 <ul>
-                  <li><a href="#">Season 1</a></li>
-                  <li><a href="#">Season 2</a></li>
-                  <li><a href="#">Season 3</a></li>
-                  <li><a href="#">Season 4</a></li>
+                  <li><a href="/chapter/Attack%20On%20Titan/1">Season 1</a></li>
+                  <li><a href="/chapter/Attack%20On%20Titan/2">Season 2</a></li>
+                  <li><a href="/chapter/Attack%20On%20Titan/3">Season 3</a></li>
+                  <li><a href="/chapter/Attack%20On%20Titan/4">Season 4</a></li>
                 </ul>
               </li>
-              <li><a href="#">The Promissed Neverland</a></li>
-              <li><a href="#">One Piece</a></li>
-              <li><a href="#">Demon Slayer</a></li>
+              <li><a href="/titles/PromissedNeverland">The Promissed Neverland</a></li>
+              <li><a href="/titles/One%20Piece">One Piece</a></li>
+              <li><a href="/titles/Demon%20Slayer">Demon Slayer</a></li>
             </ul>
           </li>
           <li><a href="/contact">Contact Us</a></li>
-
+          <li><a href="/login"><span class="loginIcon"><i class="icofont-user-alt-7"></i></span></a></li>
         </ul>
       </nav>
 
     </div>
   </header>
+
+
+<div style="display: none">
+<div id="loginIcon">
+  <input type="email" id="email">
+  <input type="password" id="password">
+
+  <button>Login</button>
+</div>
+
+</div>
