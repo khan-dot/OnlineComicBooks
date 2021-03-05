@@ -28,8 +28,6 @@ Route::get('/comicsList','ComicsController@comicsList');
 
 Route::get('/contact','PagesController@contact');
 
-Route::get('/register','PagesController@register');
-
 Route::get('/titles/{name}','PagesController@titles');
 
 Route::get('/chapter/{name}/{no}','PagesController@chapter');

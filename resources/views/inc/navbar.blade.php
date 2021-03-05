@@ -46,7 +46,11 @@
                     </ul>
                 </li>
                 <li><a href="/contact">Contact Us</a></li>
-                <li><a id="loginIcon" href="javascript:void(0)"><span class="loginIcon"><i class="icofont-user-alt-7"></i></span></a></li>
+                <?php if(!Auth::user()) { ?>
+                    <li><a title="Login" id="loginIcon" href="#loginForm"><span class="loginIcon"><i class="icofont-user-alt-7"></i></span></a></li>
+                <?php } else { ?>
+                    <li><a title="Logout" id="logoutIcon" onclick="logout()" href="javascript:void(0)"><span class="logoutIcon"><i class="icofont-ui-power"></i></span></a></li>
+                <?php } ?>
             </ul>
         </nav>
 
@@ -63,16 +67,17 @@
             <label for="password">Password:</label>
             <input type="password" placeholder="Enter password" id="password">
             <br>
+            <p id="login_err" style="color: red; display: none">Something Went Wrong!</p>
             <button onclick="submitLogin()" class="priBtn">Login</button>
-            <button onclick="openRegisterPopup()" class="secBtn">Register</button>
+            <a href="#registerForm" class="secBtn">Register</a>
         </div>
     </div>
 
 
     <div id="registerForm">
         <div id="regFormContainer" class="loginFormContainer">
-            <label for="name">Full Name:</label>
-            <input type="test" placeholder="Enter full name" id="name">
+            <label for="full_name">Full Name:</label>
+            <input type="test" placeholder="Enter full name" id="full_name">
             <br>
             <label for="reg_email">Email:</label>
             <input type="email" placeholder="Enter email address" id="reg_email">
@@ -83,8 +88,9 @@
             <label for="conf_password">Confirm Password:</label>
             <input type="password" placeholder="Enter confirm password" id="conf_password">
             <br>
-            <button class="priBtn">Register</button>
-            <button onclick="openLoginPopup()" class="secBtn">Login</button>
+            <p id="reg_err" style="color: red; display: none">Something Went Wrong!</p>
+            <button onclick="submitRegister()" class="priBtn">Register</button>
+            <a href="#loginForm" class="secBtn">Login</a>
         </div>
     </div>
 

@@ -92,5 +92,7 @@
 
   <!-- Template Main JS File -->
   <script src="\js\main.js"></script>
+
+  <input hidden id="csrf_token" value="{{csrf_token()}}">
     </body>
 </html>
