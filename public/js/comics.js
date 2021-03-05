@@ -2,8 +2,31 @@
 
 $(document).ready(function(){
 
-
 	$('#loginIcon').click(function() {
-		$.colorbox({html: $('#loginForm').html(), width:"333px", close: '<i class="icofont-close-circled"></i>'});
+		openLoginPopup();
 	});
+
+
 });
+
+
+function openLoginPopup()
+{
+	$.colorbox({html: $('#loginForm').html(), width:"389px", close: '<i class="icofont-close-circled"></i>'});
+}
+
+
+function openRegisterPopup()
+{
+	$.colorbox({html: $('#registerForm').html(), width:"389px", close: '<i class="icofont-close-circled"></i>'});
+}
+
+
+
+function submitLogin()
+{
+	console.log('khan');
+
+	console.log($('#email').val());
+
+}

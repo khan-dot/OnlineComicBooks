@@ -55,12 +55,35 @@
 
 <div style="display: none">
     <div id="loginForm">
-        <div class="loginFormContainer">
-        <input type="email" placeholder="Email ID.." id="email">
-        <br>
-        <input type="password" placeholder="Password.." id="password">
-        <br><br>
-        <button>Login</button>
+        <div id="loginFormContainer" class="loginFormContainer">
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Enter email address" id="email">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" placeholder="Enter password" id="password">
+            <br>
+            <button onclick="submitLogin()" class="priBtn">Login</button>
+            <button onclick="openRegisterPopup()" class="secBtn">Register</button>
+        </div>
+    </div>
+
+
+    <div id="registerForm">
+        <div id="regFormContainer" class="loginFormContainer">
+            <label for="name">Full Name:</label>
+            <input type="test" placeholder="Enter full name" id="name">
+            <br>
+            <label for="reg_email">Email:</label>
+            <input type="email" placeholder="Enter email address" id="reg_email">
+            <br>
+            <label for="reg_password">Password:</label>
+            <input type="password" placeholder="Enter password" id="reg_password">
+            <br>
+            <label for="conf_password">Confirm Password:</label>
+            <input type="password" placeholder="Enter confirm password" id="conf_password">
+            <br>
+            <button class="priBtn">Register</button>
+            <button onclick="openLoginPopup()" class="secBtn">Login</button>
         </div>
     </div>
 
