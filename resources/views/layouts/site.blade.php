@@ -84,6 +84,7 @@
   <script src="\vendor\isotope-layout\isotope.pkgd.min.js"></script>
   <script src="\vendor\owl.carousel\owl.carousel.min.js"></script>
   <script src="\vendor\aos\aos.js"></script>
+  <script src="\js\jquery.colorbox-min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="\js\main.js"></script>
