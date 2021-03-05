@@ -33,16 +33,27 @@
     <hr>
     <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
         <h2 style="color: white">Leave a comment here..</h2>
+
+      
         <div class="form-group">
             <i class="icofont-user-alt-7"></i>
             <input class="form-control" id="comment" placeholder="Write a Comment..">
+            <input hidden id="comic_id" value="{{$comic->id}}">
         </div>
         <div class="text-center">
-            <button class="btn btn-success" type="submit">Comment</button>
+            <button id="commentBtn" class="priBtn">Comment</button>
         </div>
 
         <h1 style="color: white">Comments:</h1>
-        <div></div>
+        <div>
+        @foreach($comments as $comment):
+
+         <p style="color: rgb(143, 192, 78); font-size: 1.5rem;">{{$comment->name . '  |-->|  ' . $comment->comment}}</p>
+         <p style="color: white">{{$comment->created_at}}</p>
+         
+
+        @endforeach
+        </div>
 
     </div>
 

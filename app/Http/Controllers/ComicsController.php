@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Comic;
 
 class ComicsController extends Controller
@@ -19,13 +20,7 @@ class ComicsController extends Controller
     }
 
 
-     public function favorites()
-    {
-         $comics2 = Comic::all();
-        return view('pages.favorites')->with('comics', $comics2);
-        
-
-    }
+  
       public function comicsList()
     {
          $comics3 = Comic::all();

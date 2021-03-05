@@ -27,7 +27,6 @@
             <ul>
                 <li class="active"><a href="/">Home</a></li>
                 <li><a href="/comicsList">Comics List</a></li>
-                <li><a href="/favorites">Favorites</a></li>
                 <li><a href="/about">About Us</a></li>
                 <li class="drop-down"><a href="">Latest Release</a>
                     <ul>
@@ -47,8 +46,10 @@
                 </li>
                 <li><a href="/contact">Contact Us</a></li>
                 <?php if(!Auth::user()) { ?>
+                    <input hidden id="isLogin" value="no">
                     <li><a title="Login" id="loginIcon" href="#loginForm"><span class="loginIcon"><i class="icofont-user-alt-7"></i></span></a></li>
                 <?php } else { ?>
+                    <input hidden id="isLogin" value="yes">
                     <li><a title="Logout" id="logoutIcon" onclick="logout()" href="javascript:void(0)"><span class="logoutIcon"><i class="icofont-ui-power"></i></span></a></li>
                 <?php } ?>
             </ul>

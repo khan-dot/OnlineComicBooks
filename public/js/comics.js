@@ -6,6 +6,29 @@ $(document).ready(function(){
 	$('#loginForm .secBtn').colorbox({inline: true, width:"389px", close: '<i class="icofont-close-circled"></i>'});
 	$('#registerForm .secBtn').colorbox({inline: true, width:"389px", close: '<i class="icofont-close-circled"></i>'});
 
+  $("#commentBtn").click(function(){
+    if($('#comment').val() == '') {
+      return false;
+    }
+
+    if($("#isLogin").val() == 'no') {
+      alert('please login to continue!');
+      return;
+    }
+
+      $.ajax({
+        url: '/comment',
+        method: 'POST',
+        headers: {'X-CSRF-TOKEN': $('#csrf_token').val()},
+        dataType: 'json',
+        data: {
+          comment: $('#comment').val(),
+          comic_id: $('#comic_id').val(),
+        },
+      }).done(function(resp) {
+        window.location.reload();
+      });
+  });
 });
 
 

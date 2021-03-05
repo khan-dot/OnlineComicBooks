@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use Illuminate\Support\Facades\DB;
+
 
 class PagesController extends Controller
 {
@@ -38,6 +40,9 @@ class PagesController extends Controller
         $data=[];
         $data['comic'] = Comic::where('comic', '=', $name)->first();
         $data['name']=$name;
+
+        $data['comments'] = DB::select('select cmm.*, u.name from comments cmm inner join comics cm on cm.id = cmm.comic_id inner join users u on u.id = cmm.user_id where cm.comic = \''. $name .'\'');
+
         return view('pages.titles', $data);
     }
       public function chapter(request $request, string $name,string $no)

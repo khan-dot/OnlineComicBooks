@@ -51,7 +51,7 @@
 
         <div class="row footer-newsletter justify-content-center">
           <div class="col-lg-6">
-            <form action="" method="post">
+            <form action="" method="">
               <input type="email" name="email" placeholder="Enter your Email"><input type="submit" value="Subscribe">
             </form>
           </div>
@@ -70,7 +70,7 @@
 
     <div class="container footer-bottom clearfix">
       <div class="copyright">
-        &copy; Copyright <strong><span>ComicsOnLinE</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Comics Online</span></strong>. All Rights Reserved
       </div>
     </div>
   </footer><!-- End Footer -->

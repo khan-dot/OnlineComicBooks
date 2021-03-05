@@ -15,14 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-
-Route::get('/comics','ComicsController@index'); 
-
 Route::get('/','ComicsController@index'); 
 
 Route::get('/about','PagesController@about');  
-
-Route::get('/favorites','ComicsController@favorites'); 
 
 Route::get('/comicsList','ComicsController@comicsList');
 
@@ -42,7 +37,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/titles/{name}','CommentsController@store');
 
-Route::post('/comment/add','CommentsController@addComment');
+Route::post('/comment','CommentsController@addComment');
 
 
 
